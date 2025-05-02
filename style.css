@@ -5,14 +5,49 @@
 
 .container {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: max-content 1fr;
 
     & > .sidebar {
         background-color: lightskyblue;
+        padding: 15px;
         grid-row: 1 / 3;
         /* TEMP */
-        height: 500px;
+        /* height: 500px; */
         /* ...TEMP */
+
+        display: grid;
+        gap: 50px;
+
+        & > .branding {
+
+            display: grid;
+            grid-template-columns: max-content max-content;
+
+        }
+
+        & > .nav {
+
+        }
+
+        & > .nav-top {
+
+            & > ul {
+                list-style: none;
+                display: grid;
+                grid-template-columns: max-content max-content;
+            }
+
+        }
+
+        & > .nav-bottom {
+
+                & > ul {
+                    list-style: none;
+                    display: grid;
+                    grid-template-columns: max-content max-content;
+                }
+
+        }
     }
 
     & > .header {
