@@ -2,3 +2,26 @@
     padding: 0;
     margin: 0;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+
+    & > .sidebar {
+        background-color: lightskyblue;
+        grid-row: 1 / 3;
+        /* TEMP */
+        height: 500px;
+        /* ...TEMP */
+    }
+
+    & > .header {
+        grid-column: 2;
+    }
+
+    & > .main-content {
+        background-color: rgb(240, 240, 240);
+        grid-column: 2;
+    }
+
+}
