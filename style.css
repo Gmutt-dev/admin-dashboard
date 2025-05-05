@@ -11,6 +11,8 @@
 :root {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 16px;
+
+    --card-shadow:  0 5px 5px darkgray;
 }
 .container {
     display: grid;
@@ -79,7 +81,7 @@
 
     & > .header {
         grid-column: 2;
-        box-shadow: 0 5px 5px darkgray;
+        box-shadow: var(--card-shadow);
         z-index: 1;
 
         display: grid;
@@ -147,7 +149,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 30px;
-            /* padding-right: 30px; */
             align-items: center;
             
             & > button {
@@ -168,52 +169,144 @@
         grid-column: 2;
 
         display: grid;
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr min-content;
+        padding: 30px 30px 30px 20px;
+        gap: 20px;
+        align-content:start;
 
         & > .projects {
-            grid-row: span 2;
-
-            & .cards {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-
-            & .card > .icon-buttons {
-                display: flex;
-                justify-content: right;
-                gap: 10px;
-                height: 35px;
-                border: none;
-
-                > .icon-button-fork {
-                    background-image: url(./img/source-fork.svg);
-                    background-repeat: no-repeat;
-                    border: inherit;
-                    flex: 1 0 auto;
-                    
-                }
-            }
-        }
-
-        & > .announcements {
-
-            & .cards {
-                display: grid;
-            }
-
-        }
-
-        & > .trending {
             
-            > .cards {
+            > h2 {
+                padding-bottom: 10px;
+            }
+
+            & .cards {
                 display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+            }
+            
+            & .card {
+                background-color: white;
+                padding: 30px;
+                border-radius: 15px;
+                background: linear-gradient(to right, orange 2%, white 2%);
+                box-shadow: 0 5px 5px darkgray;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                
+                & p {
+                    color: rgb(70, 70, 70);
+                    padding-top: 3px;
+                }
 
-                > .card {
+                    & > .icon-buttons {
+                        margin-top: auto;
+                        
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 20px;
+                        height: 35px;
+                        border: none;
+        
+                        & > button {
+                            background-color: white;
+                            background-repeat: no-repeat;
+                            border: inherit;
+                            width: 35px;
+                        }
+                        
+                        & > .icon-button-favourite {
+                            background-image: url(./img/star-plus-outline.svg);
+        
+                            
+                        }
+        
+                        & > .icon-button-watch {
+                            background-image: url(./img/eye-plus-outline.svg);
+                            
+                        }
+                        
+                        & > .icon-button-fork {
+                            background-image: url(./img/source-fork.svg);
+                            
+                        }
+                    }
+
+            }
+
+        }
+
+        & > .right-sidebar {
+            display: grid;
+            align-content: start;
+            gap: 30px;
+
+            & > .announcements {
+    
+                > h2 {
+                    padding-bottom: 10px;
+                }
+    
+    
+                & .cards {
                     display: grid;
-                    grid-template-columns: max-content max-content;
-
-                    > img {
-                        grid-row: span 2;
+                    gap: 10px;
+                    padding: 30px;
+                    background-color: white;
+                    border-radius: 15px;
+                    box-shadow: var(--card-shadow);
+    
+                    & .card:last-of-type {
+                        padding-bottom: 0;
+                        border: none;
+                    }
+    
+                    & .card {
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid lightgrey;
+    
+                        & p {
+                            color: rgb(70, 70, 70);
+                            font-size: 0.9rem;
+                            padding-top: 3px;
+                        }
+                    }
+                }
+    
+            }
+    
+            & > .trending {
+                
+                & > h2 {
+                    padding-bottom: 10px;
+                }
+    
+                & > .cards {
+                    display: grid;
+                    gap: 20px;
+                    padding: 20px;
+                    background-color: white;
+                    border-radius: 15px;
+                    box-shadow: var(--card-shadow);
+                    font-size: 0.9rem;
+                    
+                    & > .card {
+                        display: grid;
+                        align-items: center;
+                        column-gap: 10px;
+                        grid-template-columns: max-content max-content;
+    
+                        & > img {
+                            grid-row: span 2;
+                            width: 50px;
+    
+                        }
+    
+                        & p:last-of-type {
+                            color: rgb(70, 70, 70);
+                        }
                     }
                 }
             }
@@ -224,7 +317,7 @@
         grid-column: span 2;
 
         display: grid;
-        grid-template-columns: max-content max-content;
+        grid-template-columns: repeat(5, max-content);
         gap: 10px;
         justify-content: center;
     }
