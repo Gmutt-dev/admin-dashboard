@@ -79,38 +79,87 @@
 
     & > .header {
         grid-column: 2;
+        box-shadow: 0 5px 5px darkgray;
+        z-index: 1;
 
         display: grid;
         grid-template-columns: 1fr max-content;
+        padding: 20px 40px;
+        gap: 10px;
 
         & > .search-bar {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 25px;
+            place-content: center;
 
+            > input {
+                height: 25px;
+                border: none;
+                outline-color: blue;
+                border-radius: 15px;
+                background-color: rgb(240, 240, 240);
+                padding: 2px 15px;
+            }
         }
 
         & > .user-info-top {
 
             display: grid;
-            grid-template-columns: 1fr 1fr max-content;
+            grid-template-columns: 30px max-content max-content;
+            gap: 25px;
+            padding-left: 100px;
+            place-items: center;
+            justify-content: right;
+            
+            > img:nth-of-type(2) {
+                width: 50px;
+                
+            }
+            
+            > h2 {
+                font-size: 1.2rem;
+
+            }
+
         }
 
         & > .user-info-bottom {
 
             display: grid;
             grid-template-columns: max-content max-content;
+            gap: 20px;
+            font-weight: bold;
+            align-items: center;
 
             & > img {
-                grid-row: span 2;
+                width: 80px;
             }
+
+            & > div > p:last-of-type {
+
+            }
+
+        }
 
         & > .buttons {
 
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-
+            gap: 30px;
+            /* padding-right: 30px; */
+            align-items: center;
+            
             & > button {
+                border-radius: 30px;
+                padding: 10px 0;
+                color: white;
+                font-size: 1rem;
+                font-weight: bold;
+                border: none;
+                background-color: lightskyblue;
 
             }
-        }
         }
     }
 
@@ -169,6 +218,15 @@
                 }
             }
         }
+    }
+
+    & > footer {
+        grid-column: span 2;
+
+        display: grid;
+        grid-template-columns: max-content max-content;
+        gap: 10px;
+        justify-content: center;
     }
 
 }
