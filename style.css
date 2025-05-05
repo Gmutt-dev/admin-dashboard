@@ -52,6 +52,39 @@
 
     & > .header {
         grid-column: 2;
+
+        display: grid;
+        grid-template-columns: 1fr max-content;
+
+        & > .search-bar {
+
+        }
+
+        & > .user-info-top {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr max-content;
+        }
+
+        & > .user-info-bottom {
+
+            display: grid;
+            grid-template-columns: max-content max-content;
+
+            & > img {
+                grid-row: span 2;
+            }
+
+        & > .buttons {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            & > button {
+
+            }
+        }
+        }
     }
 
     & > .main-content {
