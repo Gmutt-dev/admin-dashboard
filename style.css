@@ -48,37 +48,27 @@
             & img {
                 width: 25px;
             }
-    
         }
 
-        & > .nav-top {
-    
-    
-            & > ul {
-                list-style: none;
-                display: grid;
-                grid-template-columns: max-content max-content;
-                gap: 20px;
-                align-items: end;
-            }
-    
+        & > .nav-top > ul {
+            list-style: none;
+
+            display: grid;
+            grid-template-columns: max-content max-content;
+            gap: 20px;
+            align-items: end;
         }
     
-        & > .nav-bottom {
-    
-    
-                & > ul {
-                    list-style: none;
-                    display: grid;
-                    grid-template-columns: max-content max-content;
-                    gap: 20px;
-                    align-items: end;
-                }
-    
+        & > .nav-bottom > ul {
+            list-style: none;
+
+            display: grid;
+            grid-template-columns: max-content max-content;
+            gap: 20px;
+            align-items: end;
         }
     }
     
-
     & > .header {
         grid-column: 2;
         box-shadow: var(--card-shadow);
@@ -106,7 +96,6 @@
         }
 
         & > .user-info-top {
-
             display: grid;
             grid-template-columns: 30px max-content max-content;
             gap: 25px;
@@ -114,20 +103,16 @@
             place-items: center;
             justify-content: right;
             
-            > img:nth-of-type(2) {
+            & > img:nth-of-type(2) {
                 width: 50px;
-                
             }
             
-            > h2 {
+            & > h2 {
                 font-size: 1.2rem;
-
             }
-
         }
 
         & > .user-info-bottom {
-
             display: grid;
             grid-template-columns: max-content max-content;
             gap: 20px;
@@ -137,15 +122,9 @@
             & > img {
                 width: 80px;
             }
-
-            & > div > p:last-of-type {
-
-            }
-
         }
 
         & > .buttons {
-
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 30px;
@@ -159,7 +138,6 @@
                 font-weight: bold;
                 border: none;
                 background-color: lightskyblue;
-
             }
         }
     }
@@ -176,35 +154,35 @@
 
         & > .projects {
             
-            > h2 {
+            & > h2 {
                 padding-bottom: 10px;
             }
 
-            & .cards {
+            & > .cards {
                 display: grid;
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
                 gap: 20px;
-            }
-            
-            & .card {
-                background-color: white;
-                padding: 30px;
-                border-radius: 15px;
-                background: linear-gradient(to right, orange 2%, white 2%);
-                box-shadow: 0 5px 5px darkgray;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                justify-content: start;
-                
-                & p {
-                    color: rgb(70, 70, 70);
-                    padding-top: 3px;
-                }
-
+        
+                & > .card {
+                    background-color: white;
+                    padding: 30px;
+                    border-radius: 15px;
+                    background: linear-gradient(to right, orange 2%, white 2%);
+                    box-shadow: 0 5px 5px darkgray;
+    
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    justify-content: start;
+                    
+                    & > p {
+                        color: rgb(70, 70, 70);
+                        padding-top: 3px;
+                    }
+    
                     & > .icon-buttons {
                         margin-top: auto;
-
+    
                         display: flex;
                         justify-content: flex-end;
                         gap: 20px;
@@ -220,23 +198,19 @@
                         
                         & > .icon-button-favourite {
                             background-image: url(./img/star-plus-outline.svg);
-        
-                            
                         }
         
                         & > .icon-button-watch {
-                            background-image: url(./img/eye-plus-outline.svg);
-                            
+                            background-image: url(./img/eye-plus-outline.svg); 
                         }
                         
                         & > .icon-button-fork {
                             background-image: url(./img/source-fork.svg);
-                            
                         }
                     }
-
+                }
             }
-
+            
         }
 
         & > .right-sidebar {
@@ -246,7 +220,7 @@
 
             & > .announcements {
     
-                > h2 {
+                & > h2 {
                     padding-bottom: 10px;
                 }
     
@@ -258,23 +232,22 @@
                     border-radius: 15px;
                     box-shadow: var(--card-shadow);
     
-                    & .card:last-of-type {
+                    & > .card:last-of-type {
                         padding-bottom: 0;
                         border: none;
                     }
     
-                    & .card {
+                    & > .card {
                         padding-bottom: 10px;
                         border-bottom: 1px solid lightgrey;
     
-                        & p {
+                        & > p {
                             color: rgb(70, 70, 70);
                             font-size: 0.9rem;
                             padding-top: 5px;
                         }
                     }
                 }
-    
             }
     
             & > .trending {
@@ -300,14 +273,13 @@
                         & > img {
                             grid-row: span 2;
                             width: 50px;
-    
                         }
 
-                        & p:first-of-type {
+                        & > p:first-of-type {
                             align-self: end;
                         }
     
-                        & p:last-of-type {
+                        & > p:last-of-type {
                             color: rgb(70, 70, 70);
                         }
                     }
@@ -324,5 +296,4 @@
         gap: 10px;
         justify-content: center;
     }
-
 }
