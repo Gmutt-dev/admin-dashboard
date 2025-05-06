@@ -194,6 +194,7 @@
                 box-shadow: 0 5px 5px darkgray;
                 display: flex;
                 flex-direction: column;
+                gap: 10px;
                 justify-content: start;
                 
                 & p {
@@ -203,7 +204,7 @@
 
                     & > .icon-buttons {
                         margin-top: auto;
-                        
+
                         display: flex;
                         justify-content: flex-end;
                         gap: 20px;
@@ -249,7 +250,6 @@
                     padding-bottom: 10px;
                 }
     
-    
                 & .cards {
                     display: grid;
                     gap: 10px;
@@ -270,7 +270,7 @@
                         & p {
                             color: rgb(70, 70, 70);
                             font-size: 0.9rem;
-                            padding-top: 3px;
+                            padding-top: 5px;
                         }
                     }
                 }
@@ -294,7 +294,6 @@
                     
                     & > .card {
                         display: grid;
-                        align-items: center;
                         column-gap: 10px;
                         grid-template-columns: max-content max-content;
     
@@ -302,6 +301,10 @@
                             grid-row: span 2;
                             width: 50px;
     
+                        }
+
+                        & p:first-of-type {
+                            align-self: end;
                         }
     
                         & p:last-of-type {
